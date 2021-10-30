@@ -1,3 +1,11 @@
+# 矩阵乘法
+def matrix_multiply(a, b):
+    c = [[0, 0], [0, 0]]
+    for i in range(2):
+        for j in range(2):
+            c[i][j] = a[i][0] * b[0][j] + a[i][1] * b[1][j]
+    return c
+
 # 矩阵幂
 def matrix_pow(a, n):
     ret = [[1, 0], [0, 1]]
@@ -7,16 +15,6 @@ def matrix_pow(a, n):
         n >>= 1
         a = matrix_multiply(a, a)
     return ret
-
-
-# 矩阵乘法
-def matrix_multiply(a, b):
-    c = [[0, 0], [0, 0]]
-    for i in range(2):
-        for j in range(2):
-            c[i][j] = a[i][0] * b[0][j] + a[i][1] * b[1][j]
-    return c
-
 
 def fib(n):
     if n < 2:
