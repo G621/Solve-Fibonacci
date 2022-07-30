@@ -26,3 +26,7 @@ def fib(n):
     q = [[1, 1], [1, 0]]
     res = matrix_pow(q, n - 1)
     return res[0][0]
+
+'''
+do a test.
+'''
